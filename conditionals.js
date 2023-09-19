@@ -159,3 +159,93 @@ if (age >= 21) {
     * if you want your condition to display ONE EXACT match, chain your conditional statements
 */
 
+/* 
+    ? Ternaries
+    * an expression
+    * a quick way of creating if/else conditional
+    * commonly used to check a quick condition
+    
+    ? Syntax
+
+    conditional ? expr if true : expr if false
+
+    ? Chaining Syntax
+
+    conditional ? expr if true
+                : else if expr ? expr if true
+                : else if expr ? expr if true
+                : else or Null
+
+*/
+
+let ignition = true
+
+ignition ? console.log("Ready to start") : console.log("Turn ignition on")
+
+// if (ignition) {
+//     console.log("Start")
+// } else {
+//     console.log("Ignition On")
+// }
+
+// ? Chaining Ternaries
+
+let season = 3
+
+// if (season == 1) {
+//     console.log("Spring")
+// } else if (season == 2) {
+//     console.log("Summer")
+// } else if (season == 3) {
+//     console.log("Autumn")
+// } else if (season == 4) {
+//     console.log("Winter")
+// }
+
+season == 1 ? console.log("Spring")
+            : season == 2 ? console.log("Summer")
+            : season == 3 ? console.log("Autumn")
+            : season == 4 ? console.log("Winter")
+            : null
+
+// ! If you do not have an else statement, you must use a null to avoid SyntaxError
+
+/* 
+    ! Challenge
+    * take the previous challenge, and write it in a ternary
+*/
+
+console.log(age)
+
+age < 16 ? console.log("Can't drive")
+    : age < 18 ? console.log("Can drive")
+    : age < 21 ? console.log("Can vote")
+    : age >= 21 ? console.log("Can drink")
+    : console.log("Enter valid number")
+
+/* 
+    ? Switch Statements
+    * execute a block of code dependent upon a different case
+    * we ask a question requiring specific response determined by our answer
+*/
+
+let uprightInstructor = "Rob"
+
+switch(uprightInstructor) {
+    // information that cases are compared against
+    case "Paul":
+        // condition that's compared against switch
+        // execute the code below
+        console.log(`${uprightInstructor} is a Senior Lead SD Instructor`)
+        // used to stop other cases from evaluating
+        break
+    case "Rob":
+        console.log(`${uprightInstructor} is a Lead SD Instructor`)
+        break
+    case "Ben":
+        console.log(`${uprightInstructor} is our Program Manager`)
+        break
+    default:
+        console.log(`${uprightInstructor} may not work here.`)
+}
+
