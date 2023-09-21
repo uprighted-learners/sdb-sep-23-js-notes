@@ -77,3 +77,12 @@ async function start() {
 }
 
 start()
+
+function getData() {
+    setTimeout(() => {
+        return "Isaiah"
+    }, 3000);
+}
+
+let name = getData()
+console.log(name)
